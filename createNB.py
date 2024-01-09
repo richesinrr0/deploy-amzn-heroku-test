@@ -1,7 +1,7 @@
 import pandas as pd
 #import matplotlib.pyplot as plt
 from scipy import stats
-import seaborn as sns
+#import seaborn as sns
 
 
 def getServiceFees(df):

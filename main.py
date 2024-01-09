@@ -1,12 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
 import createNB as nb
-from pathlib import Path
 import tkinter as tk 
 from tkinter.filedialog import askopenfilename
-from flask import send_file
     
 
 app = Flask(__name__) 
@@ -147,4 +145,4 @@ add option to exclude cost of goods?
 
 
 if __name__ == '__main__':
-    app.run(threaded=True)
+    app.run()
