@@ -5,6 +5,7 @@ from datetime import datetime
 import createNB as nb
 import tkinter as tk 
 from tkinter.filedialog import askopenfilename
+from multiprocessing import Process, freeze_support
     
 
 app = Flask(__name__) 
@@ -37,10 +38,11 @@ def data():
             if request.form.get('action') == 'Select Amazon File':
 
             #pass selected files into create nb folder   
-                root = tk.Tk()
-                root.withdraw()
+                #root = tk.Tk()
+                #root.withdraw()
                 amznfilename = askopenfilename()
-                root.destroy()
+                #amznfilename = '/Users/rossrichesin/Downloads/stats.xslx'
+                #root.destroy()
                 amznfile = amznfilename.split('/')[-1]
                 place_dict.update(amznfile=amznfile)
                 amznfile = place_dict['amznfile']
@@ -145,4 +147,5 @@ add option to exclude cost of goods?
 
 
 if __name__ == '__main__':
-    app.run()
+    freeze_support()
+    Process(target=root).start()
