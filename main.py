@@ -16,7 +16,7 @@ place_dict = {'amznfile':'',
 
 @app.route('/')
 def root():
-    return render_template('homePage.html', fill='')
+    return render_template('homePage.html')
 
 
 
@@ -147,4 +147,4 @@ add option to exclude cost of goods?
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(threaded=True)
